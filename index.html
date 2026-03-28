@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sai Box Cricket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+  <h2>🏏 SAI BOX CRICKET</h2>
+
+  <label>Name</label>
+  <input type="text" id="name" placeholder="Full Name">
+
+  <label>Phone Number</label>
+  <input type="text" id="phone" placeholder="Phone Number">
+
+  <label>Date</label>
+  <input type="date" id="date">
+
+  <label>Time From</label>
+  <select id="from"></select>
+
+  <label>Time To</label>
+  <select id="to"></select>
+
+  <label>Total Amount</label>
+  <input type="text" id="total" readonly>
+
+  <label>Payment</label>
+  <select id="payment">
+    <option value="">Select Payment</option>
+    <option>UPI</option>
+    <option>Card</option>
+    <option>Net Banking</option>
+  </select>
+
+  <button onclick="book()">Pay & Confirm</button>
+
+  <div id="receipt">
+    <h3>Booking Receipt</h3>
+    <p id="rname"></p>
+    <p id="rphone"></p>
+    <p id="rdate"></p>
+    <p id="rtime"></p>
+    <p id="ramount"></p>
+    <button onclick="window.print()">Print</button>
+  </div>
+
+  <hr>
+
+  <h3>📌 Already Booked Slots</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Name</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody id="bookingTable">
+      <tr><td colspan="4">No bookings yet</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    📍 Location: Sai Box Cricket Ground<br>
+    📞 Phone: 9876543210
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
